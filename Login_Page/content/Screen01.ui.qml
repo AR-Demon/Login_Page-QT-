@@ -11,6 +11,7 @@ import QtQuick.Controls 6.2
 import Login_Page
 
 Rectangle {
+    id: rectangle
     width: Constants.width
     height: Constants.height
 
@@ -18,9 +19,36 @@ Rectangle {
 
     Text {
         id: text1
-        x: 950
-        y: 532
-        text: qsTr("Text")
-        font.pixelSize: 12
+        x: 802
+        y: 186
+        width: 316
+        height: 210
+        color: "#a62222"
+        text: "LOGO"
+        font.pixelSize: 50
+        font.family: "Times New Roman"
+        font.styleName: "Bold Italic"
     }
+    states: [
+        State {
+            name: "After Login"
+
+            PropertyChanges {
+                target: text1
+                x: 802
+                y: 172
+                width: 316
+                height: 244
+                text: "LOGO"
+                horizontalAlignment: Text.AlignHCenter
+            }
+        }
+    ]
 }
+
+/*##^##
+Designer {
+    D{i:0;formeditorZoom:0.5;height:1080;width:1920}
+}
+##^##*/
+
